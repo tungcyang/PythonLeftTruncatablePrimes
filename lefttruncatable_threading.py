@@ -48,9 +48,6 @@ def is_prime(x):
     perform checks like whether x is an integer, etc.
     """
 
-    if x > 100000:
-        return False
-    
     # Check if x is a multiple of 3
     if x % 3 == 0:
         return False
