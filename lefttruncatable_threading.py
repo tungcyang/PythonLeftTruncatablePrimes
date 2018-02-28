@@ -47,7 +47,9 @@ def is_prime(x):
     is_prime() tests if the given argument x is a prime.  It does not
     perform checks like whether x is an integer, etc.
     """
-
+    if x > 1000000:
+        return False
+    
     # Check if x is a multiple of 3
     if x % 3 == 0:
         return False
@@ -285,7 +287,7 @@ def main_threading():
 
     # Check out more information about Python multiprocessing in
     # https://docs.python.org/2/library/multiprocessing.html.
-    numLogicalProcessors = multiprocessing.cpu_count()
+    numLogicalProcessors = mp.cpu_count()
     
     # The list foundLeftTruncatables starts with all the single-digit primes,
     # and they happen to be left-truncatable primes as well.
